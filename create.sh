@@ -7,5 +7,6 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 dbname="$1"
+
 $CODEQL_HOME/codeql database create "$CODEQL_DBS/$dbname" --language=java --build-mode autobuild
 exit $?
