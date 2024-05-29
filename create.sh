@@ -6,5 +6,5 @@ fi
 CODEQL_HOME=${CODEQL_HOME:=$TOOLS/codeql}
 CODEQL_DBS=${CODEQL_DBS:=$TOOLS/codeql-dbs}
 dbname="$1"
-$CODEQL_HOME/codeql database create "$CODEQL_DBS/$dbname" --language=java --build-mode
+$CODEQL_HOME/codeql database create "$CODEQL_DBS/$dbname" --language=java --build-mode autobuild
 exit $?
