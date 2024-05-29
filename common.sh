@@ -1,5 +1,4 @@
 #!/bin/bash
-CODEQL_HOME=${CODEQL_HOME:=$TOOLS/codeql}
 CODEQL_DBS=${CODEQL_DBS:=$TOOLS/codeql-dbs}
 
 function die 
@@ -16,6 +15,6 @@ function pause
 }
 
 # Check prerequisites
-[ -d $CODEQL_HOME ] || die "Error: There is no $CODEQL_HOME directory"
 [ -d $CODEQL_DBS ] || die "Error: There is no $CODEQL_DBS directory"
+type codeql > /dev/null 2>&1 || die "Error: codeql is not on PATH"
 
