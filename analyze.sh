@@ -8,5 +8,5 @@ if [ $# -eq 0 ]; then
 fi
 dbname="$1"
 
-codeql database analyze "$CODEQL_DBS/$dbname" --format sarif-latest --output target/codeql.sarif
+codeql database analyze "$CODEQL_DBS/$dbname" --format sarif-latest --output $CODEQL_SARIF
 exit $?
