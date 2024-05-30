@@ -7,7 +7,7 @@ if [ ! -f $CODEQL_SARIF ]; then
     exit 1
 fi
 
-repo=$(git config --get remote.origin.url)
+repo=wyttenbach/dumpcert
 ref="refs/heads/$(git rev-parse --abbrev-ref HEAD)"
 commit=$(git rev-parse HEAD)
 
