@@ -1,6 +1,7 @@
 #!/bin/bash
 CODEQL_DBS=${CODEQL_DBS:=$TOOLS/codeql-dbs}
-CODEQL_SARIF=${CODEQL_SARIF:=target/codeql.sarif}
+CODEQL_SARIF=${CODEQL_SARIF:=codeql.sarif}
+
 function die 
 { 
     echo "$@"
