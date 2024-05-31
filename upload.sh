@@ -7,7 +7,14 @@ if [ ! -f $CODEQL_SARIF ]; then
     exit 1
 fi
 
-repo=wyttenbach/dumpcert
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 [dbname]"
+    exit 1
+fi
+dbname="$1"
+
+owner="department-of-veterans-affairs"
+repo="$owner/$dbname"
 ref="refs/heads/$(git rev-parse --abbrev-ref HEAD)"
 commit=$(git rev-parse HEAD)
 
